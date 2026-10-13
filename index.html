@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>My Notebook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login page -->
+  <main id="login-page" class="page">
+    <form id="login-form" class="card" autocomplete="off">
+      <h1 class="site-title">My Notebook</h1>
+      <p class="hint">Enter your password to continue.</p>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" maxlength="8" autocomplete="current-password" required>
+
+      <p id="login-error" class="error" role="alert" hidden>Incorrect password. Try again.</p>
+
+      <button type="submit" class="btn primary">Open notebook</button>
+    </form>
+  </main>
+
+  <!-- Notebook page -->
+  <main id="notebook-page" class="page" hidden>
+    <header class="topbar">
+      <h1 class="site-title">My Notebook</h1>
+      <div class="topbar-right">
+        <span id="save-status" class="status">Saved</span>
+        <button id="logout-btn" type="button" class="btn">Log out</button>
+      </div>
+    </header>
+
+    <textarea id="editor" aria-label="Notebook" placeholder="Write your notes, phone numbers, emails…" spellcheck="false"></textarea>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
